@@ -5,38 +5,80 @@ import React from 'react';
 const Header = ({siteTitle}) => (
 	<header
 		style={{
-			background: 'rebeccapurple',
+			background: '#0B1722',
+			display: 'flex',
+			height: '50px',
+			justifyContent: 'center',
 			marginBottom: '1.45rem',
+			marginTop: '0px'
 		}}
 	>
 		<div
 			style={{
-				margin: '0 auto',
-				maxWidth: 960,
-				padding: '1.45rem 1.0875rem',
+				alignItems: 'center',
+				display: 'flex',
+				flexDirection: 'row',
+				justifyContent: 'space-between',
+				width: '30rem'
 			}}
 		>
-			<h1 style={{margin: 0}}>
+			<span style={{}}>
 				<Link
 					to="/"
 					style={{
 						color: 'white',
-						textDecoration: 'none',
+						textDecoration: 'none'
 					}}
 				>
-					{siteTitle}
+					About
 				</Link>
-			</h1>
+			</span>
+
+			<span style={{}}>
+				<Link
+					to="/"
+					style={{
+						color: 'white',
+						textDecoration: 'none'
+					}}
+				>
+					Samples
+				</Link>
+			</span>
+
+			<span style={{}}>
+				<Link
+					to="/"
+					style={{
+						color: 'white',
+						textDecoration: 'none'
+					}}
+				>
+					Portfolio
+				</Link>
+			</span>
+
+			<span style={{}}>
+				<Link
+					to="/"
+					style={{
+						color: 'white',
+						textDecoration: 'none'
+					}}
+				>
+					Contact
+				</Link>
+			</span>
 		</div>
 	</header>
 );
 
 Header.propTypes = {
-	siteTitle: PropTypes.string,
+	siteTitle: PropTypes.string
 };
 
 Header.defaultProps = {
-	siteTitle: '',
+	siteTitle: ''
 };
 
 export default Header;
