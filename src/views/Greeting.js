@@ -13,13 +13,14 @@ export default function Greeting({offset, speed}) {
 	return (
 		<>
 			<ParallaxLayer
+				factor={1.5}
 				offset={offset}
 				speed={speed}
 				style={{
-					background: theme.colors.background,
-					height: '120vh'
+					background: theme.colors.background
 				}}
 			></ParallaxLayer>
+
 			<ParallaxLayer offset={offset} speed={1.0}>
 				<PageTitle
 					textStyles={{
