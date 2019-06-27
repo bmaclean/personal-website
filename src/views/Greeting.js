@@ -1,6 +1,5 @@
 import React from 'react';
 // import {Link} from 'gatsby';
-
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import {useTheme} from '../hooks';
@@ -11,7 +10,7 @@ export default function Greeting({offset, speed}) {
 	const theme = useTheme();
 
 	return (
-		<>
+		<div>
 			<ParallaxLayer
 				factor={1.5}
 				offset={offset}
@@ -21,37 +20,46 @@ export default function Greeting({offset, speed}) {
 				}}
 			></ParallaxLayer>
 
-			<ParallaxLayer offset={offset} speed={1.0}>
-				<PageTitle
-					textStyles={{
-						marginTop: '10rem',
-						marginLeft: '8rem'
-					}}
-					color={theme.colors.contrastText}
-				>
-					Hello, <br />
-					I&apos;m Brendan.
-				</PageTitle>
-				<Subtitle
-					textStyles={{
-						marginTop: '1rem',
-						marginLeft: '8rem'
-					}}
-					color={theme.colors.contrastText}
-				>
-					I create{' '}
-					<span style={{color: theme.colors.tertiary}}>responsive</span>,{' '}
-					<span style={{color: theme.colors.secondary}}>aesthetic</span>, <br />
-					and <span style={{color: theme.colors.primary}}>
-						blazingly fast
-					</span>{' '}
-					web experiences.
-				</Subtitle>
-			</ParallaxLayer>
-
-			<ParallaxLayer offset={offset} speed={1.5}>
+			<ParallaxLayer
+				offset={offset}
+				speed={1.0}
+				style={{
+					display: 'flex',
+					flexDirection: 'row'
+				}}
+			>
+				<span>
+					<PageTitle
+						textStyles={{
+							marginTop: '32vh',
+							marginLeft: '15vw',
+							width: '45vw'
+						}}
+						color={theme.colors.contrastText}
+					>
+						Hello, <br />
+						I&apos;m Brendan.
+					</PageTitle>
+					<Subtitle
+						textStyles={{
+							marginTop: '1rem',
+							marginLeft: '15vw',
+							width: '45vw'
+						}}
+						color={theme.colors.contrastText}
+					>
+						I create{' '}
+						<span style={{color: theme.colors.primary}}>responsive</span>,{' '}
+						<span style={{color: theme.colors.primary}}>elegant</span>, <br />
+						and{' '}
+						<span style={{color: theme.colors.primary}}>
+							blazingly fast
+						</span>{' '}
+						web experiences.
+					</Subtitle>
+				</span>
 				<ProfileCard />
 			</ParallaxLayer>
-		</>
+		</div>
 	);
 }
