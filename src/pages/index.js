@@ -14,7 +14,7 @@ const IndexPage = () => {
 			<SEO title="Home" />
 			<Parallax pages={3}>
 				<Greeting offset={0} speed={0.5} />
-				<Samples offset={1} speed={0.5} />
+				<Samples offset={0.8} speed={0.5} />
 			</Parallax>
 		</Layout>
 	);

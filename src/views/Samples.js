@@ -1,20 +1,26 @@
 import React from 'react';
 // import {Link} from 'gatsby';
 
-import {ParallaxLayer} from 'react-spring/renderprops-addons';
+import ViewLayer from '../components/ui/ViewLayer';
+import {useTheme} from '../hooks';
+import {PageTitle} from '../components/ui/Titles';
 
 export default function Samples({offset, speed}) {
+	const theme = useTheme();
+
 	return (
 		<>
-			<ParallaxLayer
+			<ViewLayer
+				// TODO: main/dark variants of theme colors
+				background={`linear-gradient(${theme.colors.primary}, #7181E0)`}
 				offset={offset}
 				speed={speed}
-				style={{
-					background: '#256EFF',
-					height: '120vh',
-					marginTop: 0
-				}}
-			></ParallaxLayer>
+			>
+				<PageTitle style={{
+					color: 'black',
+					marginTop: '500px'
+				}}>Sfds</PageTitle>
+			</ViewLayer>
 		</>
 	);
 }
