@@ -7,14 +7,18 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Greeting from '../views/Greeting';
 import Samples from '../views/Samples';
+import Contact from '../views/Contact';
 
 const IndexPage = () => {
+	const DEV = process.env.NODE_ENV === 'development';
+
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<Parallax pages={3}>
+			<Parallax pages={DEV ? 2 : 3}>
 				<Greeting offset={0} speed={0.5} />
-				<Samples offset={0.8} speed={0.5} />
+				{DEV && <Samples offset={0.8} speed={0.5} />}
+				<Contact offset={DEV ? 0.8 : 1.8} speed={0.5} />
 			</Parallax>
 		</Layout>
 	);
