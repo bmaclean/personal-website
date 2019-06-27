@@ -2,17 +2,17 @@ import React from 'react';
 
 const themes = {
 	light: {
-		background: '#FCFCFC',
-		primary: '#FF495C',
-		secondary: '#256EFF',
-		tertiary: '#3DDC97',
+		background: 'linear-gradient(#FBFFF1, #CED1C6)',
+		primary: '#3D52D5',
+		secondary: '#B4C5E4',
+		tertiary: '#090C9B',
 		contrastText: '#0B1722'
 	},
 	dark: {
-		background: '#0B1722',
-		primary: '#FF495C',
-		secondary: '#256EFF',
-		tertiary: '#3DDC97',
+		background: 'linear-gradient(#0B1722, #1E3E5C)',
+		primary: '#3D52D5',
+		secondary: '#B4C5E4',
+		tertiary: '#090C9B',
 		contrastText: '#FCFCFC'
 	}
 };
@@ -34,7 +34,7 @@ const ThemeContext = React.createContext({
 	}
 });
 
-// colour scheme from: https://coolors.co/256eff-46237a-3ddc97-fcfcfc-ff495c
+// colour scheme from: https://coolors.co/0b1722-090c9b-3d52d5-b4c5e4-e5e8dc
 
 export default function useTheme() {
 	return React.useContext(ThemeContext);
