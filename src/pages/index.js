@@ -4,7 +4,7 @@ import React from 'react';
 import {Parallax} from 'react-spring/renderprops-addons';
 
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import Greeting from '../views/Greeting';
 import Samples from '../views/Samples';
 
