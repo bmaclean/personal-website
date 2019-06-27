@@ -3,7 +3,6 @@ import React from 'react';
 
 import ViewLayer from '../components/ui/ViewLayer';
 import {useTheme} from '../hooks';
-import {PageTitle} from '../components/ui/Titles';
 
 export default function Samples({offset, speed}) {
 	const theme = useTheme();
@@ -15,12 +14,7 @@ export default function Samples({offset, speed}) {
 				background={`linear-gradient(${theme.colors.primary}, #7181E0)`}
 				offset={offset}
 				speed={speed}
-			>
-				<PageTitle style={{
-					color: 'black',
-					marginTop: '500px'
-				}}>Sfds</PageTitle>
-			</ViewLayer>
+			></ViewLayer>
 		</>
 	);
 }
