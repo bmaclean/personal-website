@@ -18,7 +18,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-jss": "^8.6.1",
     "react-spring": "^8.0.25"
   },
   "devDependencies": {
@@ -48,6 +47,5 @@
     "type": "git",
     "url": "https://github.com/bmaclean/freelance-website"
   },
-  "bugs": {
-  }
+  "bugs": {}
 }
