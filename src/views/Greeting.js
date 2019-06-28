@@ -25,29 +25,21 @@ export default function Greeting({offset, speed}) {
 				speed={1.0}
 				style={{
 					display: 'flex',
-					flexDirection: 'row'
+					flexDirection: 'row',
+					alignItems: 'center',
+					justifyContent: 'space-evenly',
+					[theme.breakpoints.down('sm')]: {
+						flexDirection: 'column',
+						justifyContent: 'center'
+					}
 				}}
 			>
 				<span>
-					<PageTitle
-						textStyles={{
-							marginTop: '32vh',
-							marginLeft: '15vw',
-							width: '45vw'
-						}}
-						color={theme.colors.contrastText}
-					>
+					<PageTitle color={theme.colors.contrastText}>
 						Hello, <br />
 						I&apos;m Brendan.
 					</PageTitle>
-					<Subtitle
-						textStyles={{
-							marginTop: '1rem',
-							marginLeft: '15vw',
-							width: '45vw'
-						}}
-						color={theme.colors.contrastText}
-					>
+					<Subtitle textStyles={{}} color={theme.colors.contrastText}>
 						I create{' '}
 						<span style={{color: theme.colors.primary}}>responsive</span>,{' '}
 						<span style={{color: theme.colors.primary}}>elegant</span>, <br />

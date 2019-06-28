@@ -30,10 +30,7 @@ export default function ProfileCard() {
 				backgroundPosition: 'center center',
 				boxShadow: '20px 20px 50px -5px rgba(0, 0, 0, 0.7)',
 				transition: 'box-shadow 0.5s',
-				willChange: 'transform',
-				// TODO: margins should be set from Greeting view
-				// marginLeft: '65vw',
-				marginTop: '16vh'
+				willChange: 'transform'
 			}}
 		/>
 	);
