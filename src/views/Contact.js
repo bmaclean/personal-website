@@ -14,7 +14,12 @@ export default function Contact({offset, speed}) {
 				background={`linear-gradient(${theme.colors.secondary}, #EAEFF7)`}
 				offset={offset}
 				speed={speed}
-			></ViewLayer>
+				style={{
+					
+				}}
+			>
+
+			</ViewLayer>
 		</>
 	);
 }

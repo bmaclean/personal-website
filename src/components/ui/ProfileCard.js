@@ -13,7 +13,7 @@ const trans = (x, y, s) =>
 export default function ProfileCard() {
 	const [props, set] = useSpring(() => ({
 		xys: [0, 0, 1],
-		config: {mass: 20, tension: 200, friction: 50}
+		config: {mass: 20, tension: 250, friction: 150}
 	}));
 	return (
 		<animated.div
