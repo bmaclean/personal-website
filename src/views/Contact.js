@@ -3,6 +3,7 @@ import React from 'react';
 
 import ViewLayer from '../components/ui/ViewLayer';
 import {useTheme} from '../hooks';
+import {Title} from '../components/ui';
 
 export default function Contact({offset, speed}) {
 	const theme = useTheme();
@@ -14,11 +15,18 @@ export default function Contact({offset, speed}) {
 				background={`linear-gradient(${theme.colors.secondary}, #EAEFF7)`}
 				offset={offset}
 				speed={speed}
-				style={{
-					
-				}}
 			>
-
+				<Title
+					variant="view"
+					css={{
+						marginLeft: '10%',
+						marginTop: '30%',
+						// TODO: theme color main/light/dark
+						color: '#0B1722'
+					}}
+				>
+					Contact
+				</Title>
 			</ViewLayer>
 		</>
 	);

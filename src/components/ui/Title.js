@@ -13,24 +13,27 @@ const styles = {
 	}
 };
 
-export default function Title({children, variant}) {
+export default function Title({children, variant, ...rest}) {
 	const theme = useTheme();
 	const titleStyles =
-		styles[variant] ||
-		// eslint-disable-next-line no-console
-		console.error(
-			'Invalid variant supplied to <Title>. Please provide one of: page, subtitle, view.'
-		);
+		variant === undefined
+			? styles.view
+			: styles[variant] ||
+			  // eslint-disable-next-line no-console
+			  console.error(
+					'Invalid variant supplied to <Title>. Please provide one of: page, subtitle, view.'
+			  );
 
 	return (
 		<h1
-			style={{
+			css={{
 				color: theme.colors.contrastText,
 				[theme.breakpoints.down('sm')]: {
 					fontSize: '2em'
 				},
 				...titleStyles
 			}}
+			{...rest}
 		>
 			{children}
 		</h1>
