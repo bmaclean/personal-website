@@ -9,12 +9,10 @@ import Greeting from '../views/Greeting';
 import Contact from '../views/Contact';
 
 const IndexPage = () => {
-	const DEV = process.env.NODE_ENV === 'development';
-
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<Parallax pages={DEV ? 2 : 3}>
+			<Parallax pages={2}>
 				<Greeting offset={0} speed={0.5} />
 				<Contact offset={0.8} speed={0.5} />
 			</Parallax>
