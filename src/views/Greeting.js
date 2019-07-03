@@ -14,7 +14,7 @@ export default function Greeting({offset, speed}) {
 				factor={1.8}
 				offset={offset}
 				speed={speed}
-				style={{
+				css={{
 					background: theme.colors.background
 				}}
 			></ParallaxLayer>
@@ -22,12 +22,12 @@ export default function Greeting({offset, speed}) {
 			<ParallaxLayer
 				offset={offset}
 				speed={1.0}
-				style={{
+				css={{
 					display: 'flex',
 					flexDirection: 'row',
 					alignItems: 'center',
 					justifyContent: 'space-evenly',
-					[theme.breakpoints.down('sm')]: {
+					[theme.breakpoints.down('md')]: {
 						flexDirection: 'column',
 						justifyContent: 'center'
 					}
