@@ -2,15 +2,15 @@ import React from 'react';
 import {useTheme} from '../../hooks';
 
 const styles = {
-	page: {
-		fontSize: '5em'
-	},
-	subtitle: {
-		fontSize: '2em'
-	},
-	view: {
-		fontSize: '4em'
-	}
+	page: resolution => ({
+		fontSize: resolution === 'desktop' ? '5em' : '4em'
+	}),
+	subtitle: resolution => ({
+		fontSize: resolution === 'desktop' ? '2em' : '2em'
+	}),
+	view: resolution => ({
+		fontSize: resolution === 'desktop' ? '4em' : '3em'
+	}),
 };
 
 export default function Title({children, variant, ...rest}) {
@@ -29,7 +29,10 @@ export default function Title({children, variant, ...rest}) {
 			css={{
 				color: theme.colors.contrastText,
 				[theme.breakpoints.down('sm')]: {
-					fontSize: '2em'
+					...titleStyles('mobile')
+				},
+				[theme.breakpoints.up('sm')]: {
+					...titleStyles('desktop')
 				},
 				...titleStyles
 			}}
