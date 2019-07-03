@@ -3,8 +3,7 @@ import React from 'react';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import {useTheme} from '../hooks';
-import {PageTitle, Subtitle} from '../components/ui/Titles';
-import ProfileCard from '../components/ui/ProfileCard';
+import {ProfileCard, Title} from '../components/ui';
 
 export default function Greeting({offset, speed}) {
 	const theme = useTheme();
@@ -35,11 +34,11 @@ export default function Greeting({offset, speed}) {
 				}}
 			>
 				<span>
-					<PageTitle color={theme.colors.contrastText}>
+					<Title variant="page">
 						Hello, <br />
 						I&apos;m Brendan.
-					</PageTitle>
-					<Subtitle textStyles={{}} color={theme.colors.contrastText}>
+					</Title>
+					<Title variant="subtitle">
 						I create{' '}
 						<span style={{color: theme.colors.primary}}>responsive</span>,{' '}
 						<span style={{color: theme.colors.primary}}>elegant</span>, <br />
@@ -48,7 +47,7 @@ export default function Greeting({offset, speed}) {
 							blazingly fast
 						</span>{' '}
 						web experiences.
-					</Subtitle>
+					</Title>
 				</span>
 				<ProfileCard />
 			</ParallaxLayer>
