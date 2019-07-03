@@ -1,7 +1,8 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Brendan Maclean Freelance',
-		description: 'Brendan Maclean Freelance creates responsive, aesthetic, and blazingly fast web experiences at an affordable price.',
+		description:
+			'Brendan Maclean Freelance creates responsive, aesthetic, and blazingly fast web experiences at an affordable price.',
 		author: '@bmaclean'
 	},
 	plugins: [
@@ -23,8 +24,8 @@ module.exports = {
 				start_url: '/',
 				background_color: '#0B1722',
 				theme_color: '#3D52D5',
-				display: 'minimal-ui'
-				// icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				display: 'minimal-ui',
+				icon: 'src/images/curly-brackets.png'
 			}
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality
