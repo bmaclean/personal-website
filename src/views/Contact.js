@@ -42,40 +42,50 @@ export default function Contact({offset, speed}) {
 					<div>
 						<TextField
 							label="Name"
+							aria-label="Name"
+							name="name"
 							margin="normal"
 							variant="outlined"
-							// required
-							css={{width: '40%'}}
+							required
+							css={{width: '48%'}}
 						/>
 						<TextField
 							label="Company"
+							aria-label="Company"
+							name="company"
 							margin="normal"
 							variant="outlined"
-							css={{width: '40%'}}
+							css={{width: '48%'}}
 						/>
 					</div>
 					<div>
 						<TextField
 							label="Email"
+							aria-label="Email"
+							name="_replyTo"
 							margin="normal"
 							variant="outlined"
-							// required
-							css={{width: '40%'}}
+							required
+							css={{width: '48%'}}
 						/>
 						<TextField
 							label="Phone"
+							aria-label="Phone"
+							name="phone"
 							margin="normal"
 							variant="outlined"
-							css={{width: '40%'}}
+							css={{width: '48%'}}
 						/>
 					</div>
 					<div>
 						<TextField
 							label="What can I do for you today?"
+							aria-label="What can I do for you today?"
+							name="message"
 							multiline
 							margin="normal"
 							variant="outlined"
-							// required
+							required
 							css={{width: '100%'}}
 						/>
 					</div>
