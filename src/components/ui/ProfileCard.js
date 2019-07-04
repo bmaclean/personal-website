@@ -21,8 +21,8 @@ export default function ProfileCard() {
 			onMouseLeave={() => set({xys: [0, 0, 1]})}
 			style={{
 				transform: props.xys.interpolate(trans),
-				width: '20vw',
-				height: '30vw',
+				width: '350px',
+				height: '500px',
 				background: 'grey',
 				borderRadius: '5px',
 				backgroundImage: `url(${ProfileImage})`,
