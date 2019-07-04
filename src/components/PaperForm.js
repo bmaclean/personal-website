@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button} from '@material-ui/core';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import {useTheme} from '../hooks';
 
 export default function PaperForm({children, ...rest}) {
+	const [verified, setVerified] = useState(false);
 	const theme = useTheme();
 
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log('submitted');
+	};
+
+	const recaptchaSubmit = e => {
+		setVerified(true);
 	};
 
 	return (
@@ -56,14 +62,22 @@ export default function PaperForm({children, ...rest}) {
 					marginTop: '4rem'
 				}}
 			>
-				<Button
-					variant="contained"
-					color="primary"
-					type="submit"
-					css={{height: '50px', width: '20%'}}
-				>
-					Send
-				</Button>
+				{verified ? (
+					<Button
+						variant="contained"
+						color="primary"
+						type="submit"
+						css={{height: '50px', width: '20%'}}
+					>
+						Send
+					</Button>
+				) : (
+					<ReCAPTCHA
+						sitekey="6Lfm1iwUAAAAABEzDr2bDQh-211dwCmTZFz-XXDF"
+						onChange={recaptchaSubmit}
+					/>
+				)}
+
 				<div></div>
 			</div>
 		</form>
