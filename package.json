@@ -1,9 +1,9 @@
 {
-  "name": "freelance-website",
+  "name": "brendan-maclean-web-services",
   "private": true,
-  "description": "Brendan Maclean's freelance website.",
+  "description": "A website for Brendan Maclean Web Services.",
   "version": "0.1.0",
-  "author": "Brendan Maclean <brendan.maclean@alumni.ubc.ca>",
+  "author": "Brendan Maclean <contact@brendanmaclean.co>",
   "dependencies": {
     "@babel/core": "^7.0.0-0",
     "@emotion/core": "^10.0.14",

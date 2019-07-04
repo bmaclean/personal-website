@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Brendan Maclean Freelance',
+		title: 'Brendan Maclean Web Services',
 		description:
-			'Brendan Maclean Freelance creates responsive, aesthetic, and blazingly fast web experiences at an affordable price.',
+			'Creating professional, high-powered web experiences for local businesses.',
 		author: '@bmaclean'
 	},
 	plugins: [
@@ -19,8 +19,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'Brendan Maclean Freelance',
-				short_name: 'bmacfreelance',
+				name: 'Brendan Maclean Web Services',
+				short_name: 'bmwebservices',
 				start_url: '/',
 				background_color: '#0B1722',
 				theme_color: '#3D52D5',

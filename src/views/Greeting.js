@@ -34,19 +34,15 @@ export default function Greeting({offset, speed}) {
 				}}
 			>
 				<span>
-					<Title variant="page">
-						Hello, <br />
-						I&apos;m Brendan.
+					<Title variant="page" css={{marginBottom: 0}}>
+						Welcome <br />
 					</Title>
+					<Title variant="subtitle">to Brendan Maclean Web Services.</Title>
 					<Title variant="subtitle">
 						I create{' '}
-						<span style={{color: theme.colors.primary}}>responsive</span>,{' '}
-						<span style={{color: theme.colors.primary}}>elegant</span>, <br />
-						and{' '}
-						<span style={{color: theme.colors.primary}}>
-							blazingly fast
-						</span>{' '}
-						web experiences.
+						<span style={{color: theme.colors.primary}}>professional</span>,{' '}
+						<span style={{color: theme.colors.primary}}>high-powered </span>
+						<br /> web experiences for local businesses.
 					</Title>
 				</span>
 				<ProfileCard />
