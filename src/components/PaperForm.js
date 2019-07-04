@@ -24,6 +24,7 @@ export default function PaperForm({children, ...rest}) {
 			css={{
 				// TODO: organize CSS attributes in all inline styles
 				padding: '3rem',
+				paddingTop: '1rem',
 				borderRadius: '5px',
 				background: theme.colors.contrastText,
 				display: 'flex',
@@ -38,16 +39,15 @@ export default function PaperForm({children, ...rest}) {
 					width: '100%'
 				},
 				[theme.breakpoints.down('md')]: {
-					width: '600px',
-
-					[theme.breakpoints.down('sm')]: {
-						width: '448px',
+					width: '600px'
+				},
+				[theme.breakpoints.down('sm')]: {
+					width: '340px',
+					'& > *': {
+						flexDirection: 'column',
+						alignItems: 'center',
 						'& > *': {
-							flexDirection: 'column',
-							alignItems: 'center',
-							'& > *': {
-								width: '100%'
-							}
+							width: '100%'
 						}
 					}
 				}
@@ -67,7 +67,7 @@ export default function PaperForm({children, ...rest}) {
 						variant="contained"
 						color="primary"
 						type="submit"
-						css={{height: '50px', width: '20%'}}
+						css={{height: '50px', width: '20%', marginTop: '2rem'}}
 					>
 						Send
 					</Button>
