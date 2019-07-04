@@ -3,9 +3,9 @@ import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 export default function ViewLayer({background, children, ...props}) {
 	return (
-		<ParallaxLayer {...props} factor={2.5}>
+		<ParallaxLayer {...props} factor={2}>
 			<div
-				style={{
+				css={{
 					position: 'absolute',
 					background,
 					width: '100%',

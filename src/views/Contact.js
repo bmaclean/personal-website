@@ -3,9 +3,8 @@ import React from 'react';
 import {TextField} from '@material-ui/core';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
-import ViewLayer from '../components/ui/ViewLayer';
 import {useTheme} from '../hooks';
-import {PaperForm, Title} from '../components/ui';
+import {PaperForm, Title, ViewLayer} from '../components/ui';
 
 export default function Contact({offset, speed}) {
 	const theme = useTheme();
@@ -22,6 +21,7 @@ export default function Contact({offset, speed}) {
 				speed={1.5}
 				offset={offset}
 				css={{
+					marginTop: '15%',
 					display: 'flex',
 					justifyContent: 'center',
 					flexDirection: 'column',
@@ -71,7 +71,7 @@ export default function Contact({offset, speed}) {
 							label="What can we do for you today?"
 							margin="normal"
 							variant="outlined"
-							css={{width: '80%'}}
+							css={{width: '100%'}}
 						/>
 					</div>
 				</PaperForm>

@@ -21,7 +21,7 @@ export default function Greeting({offset, speed}) {
 
 			<ParallaxLayer
 				offset={offset}
-				speed={1.0}
+				speed={1.5}
 				css={{
 					display: 'flex',
 					flexDirection: 'row',
