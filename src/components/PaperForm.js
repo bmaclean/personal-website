@@ -1,13 +1,20 @@
 import React from 'react';
 import {Button} from '@material-ui/core';
 
-import {useTheme} from '../../hooks';
+import {useTheme} from '../hooks';
 
 export default function PaperForm({children, ...rest}) {
 	const theme = useTheme();
 
+	const handleSubmit = e => {
+		e.preventDefault();
+		console.log('submitted');
+	};
+
 	return (
-		<div
+		<form
+			autoComplete="on"
+			onSubmit={handleSubmit}
 			css={{
 				// TODO: organize CSS attributes in all inline styles
 				padding: '3rem',
@@ -52,12 +59,13 @@ export default function PaperForm({children, ...rest}) {
 				<Button
 					variant="contained"
 					color="primary"
+					type="submit"
 					css={{height: '50px', width: '20%'}}
 				>
 					Send
 				</Button>
 				<div></div>
 			</div>
-		</div>
+		</form>
 	);
 }
