@@ -21,6 +21,9 @@ export default function PaperForm({children, ...rest}) {
 		<form
 			autoComplete="on"
 			onSubmit={handleSubmit}
+			name="contact"
+			method="POST"
+			data-netlify="true"
 			css={{
 				// TODO: organize CSS attributes in all inline styles
 				padding: '3rem',
