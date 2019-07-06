@@ -10,7 +10,15 @@ const styles = {
 	}),
 	view: resolution => ({
 		fontSize: resolution === 'desktop' ? '4em' : '3em'
-	}),
+	})
+};
+
+const Header = ({children, variant, ...rest}) => {
+	return variant === 'subtitle' ? (
+		<h2 {...rest}>{children}</h2>
+	) : (
+		<h1 {...rest}>{children}</h1>
+	);
 };
 
 export default function Title({children, variant, ...rest}) {
@@ -25,7 +33,8 @@ export default function Title({children, variant, ...rest}) {
 			  );
 
 	return (
-		<h1
+		<Header
+			variant={variant}
 			css={{
 				color: theme.colors.contrastText,
 				[theme.breakpoints.down('sm')]: {
@@ -39,6 +48,6 @@ export default function Title({children, variant, ...rest}) {
 			{...rest}
 		>
 			{children}
-		</h1>
+		</Header>
 	);
 }

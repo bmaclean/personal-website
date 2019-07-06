@@ -39,9 +39,8 @@ export default function Greeting({offset, speed}) {
 					</Title>
 					<Title variant="subtitle">to Brendan Maclean Web Services.</Title>
 					<Title variant="subtitle">
-						I create{' '}
-						<span style={{color: theme.colors.primary}}>professional</span>,{' '}
-						<span style={{color: theme.colors.primary}}>high-powered </span>
+						I create <b style={{color: theme.colors.primary}}>professional</b>,{' '}
+						<b style={{color: theme.colors.primary}}>high-powered </b>
 						<br /> web experiences for local businesses.
 					</Title>
 				</span>
