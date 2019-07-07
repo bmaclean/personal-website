@@ -3,18 +3,17 @@ import React from 'react';
 
 import {Parallax} from 'react-spring/renderprops-addons';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import Greeting from '../views/Greeting';
-import Contact from '../views/Contact';
+import {Layout, SEO} from '../components';
+import {Contact, Greeting, Services} from '../views';
 
 const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<Parallax pages={2.15}>
+			<Parallax pages={3}>
 				<Greeting offset={0} speed={0.5} />
-				<Contact offset={1} speed={0.5} />
+				<Services offset={1} speed={0.5} />
+				<Contact offset={2} speed={0.5} />
 			</Parallax>
 		</Layout>
 	);
