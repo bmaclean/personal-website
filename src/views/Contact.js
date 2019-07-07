@@ -4,8 +4,7 @@ import {TextField} from '@material-ui/core';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import {useTheme} from '../hooks';
-import {PaperForm} from '../components';
-import {Title, ViewLayer} from '../components/ui';
+import {PaperForm, Title, ViewLayer} from '../components';
 
 export default function Contact({offset, speed}) {
 	const theme = useTheme();
@@ -22,7 +21,7 @@ export default function Contact({offset, speed}) {
 				speed={1.5}
 				offset={offset}
 				css={{
-					marginTop: '15%',
+					marginTop: '18%',
 					display: 'flex',
 					justifyContent: 'center',
 					flexDirection: 'column',
