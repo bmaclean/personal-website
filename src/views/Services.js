@@ -1,9 +1,10 @@
 import React from 'react';
 // import {Link} from 'gatsby';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
+import {Code, Computer, YoutubeSearchedFor} from '@material-ui/icons';
 
 import {useTheme} from '../hooks';
-import {Title, ViewLayer} from '../components';
+import {ServiceCard, Title, ViewLayer} from '../components';
 
 export default function Contact({offset, speed}) {
 	const theme = useTheme();
@@ -12,7 +13,7 @@ export default function Contact({offset, speed}) {
 		<>
 			<ViewLayer
 				// TODO: main/dark variants of theme colors
-				background={`linear-gradient(${theme.colors.primary}, #1846A3)`}
+				background={`linear-gradient(${theme.colors.primary}, #74A2FF)`}
 				offset={offset}
 				speed={speed}
 			></ViewLayer>
@@ -20,6 +21,7 @@ export default function Contact({offset, speed}) {
 				speed={1.5}
 				offset={offset}
 				css={{
+					marginTop: '15%',
 					display: 'flex',
 					justifyContent: 'center',
 					flexDirection: 'column',
@@ -34,9 +36,34 @@ export default function Contact({offset, speed}) {
 				>
 					Services
 				</Title>
-				{/* WEB DESIGN */}
-				{/* CMS INTEGRATION */}
-				{/* SEO */}
+				<div
+					css={{
+						display: 'flex',
+						marginTop: '5%',
+						flexDirection: 'row',
+						justifyContent: 'space-evenly',
+						width: '100%'
+					}}
+				>
+					<ServiceCard
+						Icon={Code}
+						title="WEB DESIGN"
+						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					/>{' '}
+					{/* WEB DESIGN */}
+					<ServiceCard
+						Icon={Computer}
+						title="CMS INTEGRATION"
+						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					/>{' '}
+					{/* CMS INTEGRATION "I .... to make it easier for you to manage your online business presence." */}
+					<ServiceCard
+						Icon={YoutubeSearchedFor}
+						title="SEARCH ENGINE OPTIMIZATION"
+						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					/>{' '}
+					{/* SEO */}
+				</div>
 			</ParallaxLayer>
 		</>
 	);
