@@ -3,7 +3,7 @@ import React from 'react';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import {useTheme} from '../hooks';
-import {Title, ViewLayer} from '../components/ui';
+import {Title, ViewLayer} from '../components';
 
 export default function Contact({offset, speed}) {
 	const theme = useTheme();
@@ -20,7 +20,6 @@ export default function Contact({offset, speed}) {
 				speed={1.5}
 				offset={offset}
 				css={{
-					marginTop: '15%',
 					display: 'flex',
 					justifyContent: 'center',
 					flexDirection: 'column',
@@ -35,6 +34,9 @@ export default function Contact({offset, speed}) {
 				>
 					Services
 				</Title>
+				{/* WEB DESIGN */}
+				{/* CMS INTEGRATION */}
+				{/* SEO */}
 			</ParallaxLayer>
 		</>
 	);

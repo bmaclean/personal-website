@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import {useTheme} from '../hooks';
-import {Title} from '../components/ui';
+import {Title} from '../components';
 
 export default function NotFoundPage() {
 	const theme = useTheme();

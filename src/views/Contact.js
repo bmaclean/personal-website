@@ -4,8 +4,7 @@ import {TextField} from '@material-ui/core';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import {useTheme} from '../hooks';
-import {PaperForm} from '../components';
-import {Title, ViewLayer} from '../components/ui';
+import {PaperForm, Title, ViewLayer} from '../components';
 
 export default function Contact({offset, speed}) {
 	const theme = useTheme();

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSpring, animated} from 'react-spring';
-import ProfileImage from '../../images/profile_image.png';
+import ProfileImage from '../images/profile_image.png';
 
 const calc = (x, y) => [
 	-(y - window.innerHeight / 2) / 20,

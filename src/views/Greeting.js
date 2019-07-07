@@ -3,7 +3,7 @@ import React from 'react';
 import {ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import {useTheme} from '../hooks';
-import {ProfileCard, Title} from '../components/ui';
+import {ProfileCard, Title} from '../components';
 
 export default function Greeting({offset, speed}) {
 	const theme = useTheme();
