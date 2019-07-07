@@ -17,6 +17,7 @@ const BoldGreetingText = ({children}) => (
 	</b>
 );
 
+// TODO: animation reliant on card's position on screen
 export default function Greeting({offset, speed}) {
 	const theme = useTheme();
 

@@ -20,11 +20,10 @@ export default function Card({children, ...rest}) {
 		<animated.div
 			onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
 			onMouseLeave={() => set({xys: [0, 0, 1]})}
-			css={{
+			style={{
 				transform: props.xys.interpolate(trans),
 				width: '350px',
 				height: '500px',
-				background: 'grey',
 				borderRadius: '5px',
 				boxShadow: '20px 20px 50px -5px rgba(0, 0, 0, 0.7)',
 				transition: 'box-shadow 0.5s',
@@ -33,6 +32,6 @@ export default function Card({children, ...rest}) {
 			{...rest}
 		>
 			{children}
-			</animated.div>
+		</animated.div>
 	);
 }
