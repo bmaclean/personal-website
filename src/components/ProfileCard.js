@@ -7,7 +7,7 @@ import {Card} from './';
 export default function ProfileCard() {
 	return (
 		<Card
-			style={{
+			css={{
 				width: '350px',
 				height: '500px',
 				background: 'grey',

@@ -6,10 +6,12 @@ const calc = (x, y) => [
 	(x - window.innerWidth / 2) / 20,
 	1.1
 ];
+
 const trans = (x, y, s) =>
 	`perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-export default function Card({...rest}) {
+// TODO : broke animation when refactoring
+export default function Card({children, ...rest}) {
 	const [props, set] = useSpring(() => ({
 		xys: [0, 0, 1],
 		config: {mass: 20, tension: 250, friction: 150}
@@ -18,7 +20,7 @@ export default function Card({...rest}) {
 		<animated.div
 			onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
 			onMouseLeave={() => set({xys: [0, 0, 1]})}
-			style={{
+			css={{
 				transform: props.xys.interpolate(trans),
 				width: '350px',
 				height: '500px',
@@ -29,6 +31,8 @@ export default function Card({...rest}) {
 				willChange: 'transform'
 			}}
 			{...rest}
-		/>
+		>
+			{children}
+			</animated.div>
 	);
 }
