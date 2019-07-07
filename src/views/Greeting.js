@@ -5,6 +5,18 @@ import {ParallaxLayer} from 'react-spring/renderprops-addons';
 import {useTheme} from '../hooks';
 import {ProfileCard, Title} from '../components';
 
+const BoldGreetingText = ({children}) => (
+	<b
+		css={{
+			background: '-webkit-linear-gradient(#EBF1FF, #88AFFF)',
+			'-webkit-background-clip': 'text',
+			'-webkit-text-fill-color': 'transparent'
+		}}
+	>
+		{children}
+	</b>
+);
+
 export default function Greeting({offset, speed}) {
 	const theme = useTheme();
 
@@ -39,8 +51,8 @@ export default function Greeting({offset, speed}) {
 					</Title>
 					<Title variant="subtitle">to Brendan Maclean Web Services.</Title>
 					<Title variant="subtitle">
-						I create <b style={{color: theme.colors.primary}}>professional</b>,{' '}
-						<b style={{color: theme.colors.primary}}>high-powered </b>
+						I create <BoldGreetingText>professional</BoldGreetingText>,
+						<BoldGreetingText> high-powered</BoldGreetingText>
 						<br /> web experiences for local businesses.
 					</Title>
 				</span>

@@ -10,7 +10,7 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<Parallax pages={3.1}>
+			<Parallax pages={3.2}>
 				<Greeting offset={0} speed={0.5} />
 				<Services offset={1} speed={0.5} />
 				<Contact offset={2} speed={0.5} />
