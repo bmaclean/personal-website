@@ -4,13 +4,28 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import {useTheme} from '../hooks';
 
+function encode(data) {
+	return Object.keys(data)
+		.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+		.join('&');
+}
+
 export default function PaperForm({children, ...rest}) {
 	const [verified, setVerified] = useState(false);
 	const theme = useTheme();
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		console.log('submitted');
+		const form = e.target;
+		fetch('/', {
+			method: 'POST',
+			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+			body: encode({
+				'form-name': form.getAttribute('name')
+			})
+		})
+			.then(() => console.log('Contact info submitted.'))
+			.catch(error => alert(error));
 	};
 
 	const recaptchaSubmit = e => {
@@ -22,8 +37,9 @@ export default function PaperForm({children, ...rest}) {
 			autoComplete="on"
 			name="contact"
 			method="POST"
+			onSubmit={handleSubmit}
 			data-netlify="true"
-			target="_blank"
+			data-netlify-honeypot="bot-field"
 			css={{
 				// TODO: organize CSS attributes in all inline styles
 				padding: '3rem',
@@ -42,7 +58,7 @@ export default function PaperForm({children, ...rest}) {
 					width: '100%'
 				},
 				[theme.breakpoints.down('md')]: {
-					width: '600px',
+					width: '600px'
 				},
 				[theme.breakpoints.down('sm')]: {
 					padding: '1rem',
