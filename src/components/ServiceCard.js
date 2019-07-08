@@ -19,36 +19,38 @@ export default function ServiceCard({
 				background: 'white',
 				borderRadius: '5px',
 				height: '500px',
-				width: '350px'
+				width: '350px',
+				[theme.breakpoints.down('sm')]: {
+					width: '245px',
+					height: '350px',
+					[theme.breakpoints.down('sm')]: {
+						alignItems: 'center',
+						flexDirection: 'column',
+						justifyContent: 'space-between'
+					},
+					marginBottom: '10%'
+				}
 			}}
 			{...rest}
 		>
-			{/* <div
-			css={{
-				height: '20%',
-				borderBottom: `3px solid ${theme.colors.primary}`
-			}}
-			>
-			HEADER
-			</div> */}
 			<div
 				css={{
-					height: '40%',
-					display: 'flex',
 					alignItems: 'center',
-					justifyContent: 'center',
-					flexDirection: 'column'
+					display: 'flex',
+					flexDirection: 'column',
+					height: '40%',
+					justifyContent: 'center'
 				}}
 			>
 				<div
 					css={{
-						display: 'flex',
 						alignItems: 'center',
-						justifyContent: 'center',
-						height: '10ch',
-						width: '10ch',
 						backgroundColor: '#AFCAFF',
-						borderRadius: '50%'
+						borderRadius: '50%',
+						display: 'flex',
+						height: '10ch',
+						justifyContent: 'center',
+						width: '10ch'
 					}}
 				>
 					<Icon
@@ -62,11 +64,12 @@ export default function ServiceCard({
 			</div>
 			<div
 				css={{
-					height: '10%',
-					display: 'flex',
 					alignItems: 'center',
+					display: 'flex',
+					flexDirection: 'column',
+					height: '10%',
 					justifyContent: 'center',
-					flexDirection: 'column'
+					textAlign: 'center'
 				}}
 			>
 				<span>
@@ -75,13 +78,14 @@ export default function ServiceCard({
 			</div>
 			<div
 				css={{
-					height: '50%',
-					display: 'flex',
 					alignItems: 'center',
-					justifyContent: 'center',
+					display: 'flex',
 					flexDirection: 'column',
-					textAlign: 'center',
-					padding: '15px'
+					height: '50%',
+					justifyContent: 'center',
+					overflow: 'hidden',
+					padding: '15px',
+					textAlign: 'center'
 				}}
 			>
 				<p>{description}</p>

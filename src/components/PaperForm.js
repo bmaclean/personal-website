@@ -20,10 +20,10 @@ export default function PaperForm({children, ...rest}) {
 	return (
 		<form
 			autoComplete="on"
-			onSubmit={handleSubmit}
 			name="contact"
 			method="POST"
 			data-netlify="true"
+			target="_blank"
 			css={{
 				// TODO: organize CSS attributes in all inline styles
 				padding: '3rem',
@@ -42,15 +42,17 @@ export default function PaperForm({children, ...rest}) {
 					width: '100%'
 				},
 				[theme.breakpoints.down('md')]: {
-					width: '600px'
+					width: '600px',
 				},
 				[theme.breakpoints.down('sm')]: {
-					width: '340px',
+					padding: '1rem',
+					width: '280px',
 					'& > *': {
 						flexDirection: 'column',
 						alignItems: 'center',
+						width: '100%',
 						'& > *': {
-							width: '100%'
+							width: '100% !important'
 						}
 					}
 				}
@@ -62,7 +64,12 @@ export default function PaperForm({children, ...rest}) {
 				css={{
 					display: 'flex',
 					flexDirection: 'row',
-					marginTop: '4rem'
+					marginTop: '4rem',
+					width: '100%',
+					[theme.breakpoints.down('md')]: {
+						justifyContent: 'center',
+						alignItems: 'center'
+					}
 				}}
 			>
 				{verified ? (
@@ -70,7 +77,7 @@ export default function PaperForm({children, ...rest}) {
 						variant="contained"
 						color="primary"
 						type="submit"
-						css={{height: '50px', width: '20%', marginTop: '2rem'}}
+						css={{height: '50px', width: '200px', marginTop: '2rem'}}
 					>
 						Send
 					</Button>
@@ -78,6 +85,12 @@ export default function PaperForm({children, ...rest}) {
 					<ReCAPTCHA
 						sitekey="6Lfm1iwUAAAAABEzDr2bDQh-211dwCmTZFz-XXDF"
 						onChange={recaptchaSubmit}
+						css={{
+							transform: 'scale(0.80) !important',
+							'-webkit-transform': 'scale(0.80) !important',
+							'transform-origin': '0 0 !important',
+							'-webkit-transform-origin': '0 0 !important'
+						}}
 					/>
 				)}
 

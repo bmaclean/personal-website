@@ -39,10 +39,15 @@ export default function Contact({offset, speed}) {
 				<div
 					css={{
 						display: 'flex',
-						marginTop: '5%',
 						flexDirection: 'row',
 						justifyContent: 'space-evenly',
-						width: '100%'
+						marginTop: '5%',
+						width: '100%',
+						[theme.breakpoints.down('sm')]: {
+							alignItems: 'center',
+							flexDirection: 'column',
+							justifyContent: 'space-between'
+						}
 					}}
 				>
 					<ServiceCard

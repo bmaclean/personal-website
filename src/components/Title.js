@@ -3,13 +3,13 @@ import {useTheme} from '../hooks';
 
 const styles = {
 	page: resolution => ({
-		fontSize: resolution === 'desktop' ? '5em' : '4em'
+		fontSize: resolution === 'desktop' ? '5em' : '3em'
 	}),
 	subtitle: resolution => ({
-		fontSize: resolution === 'desktop' ? '2em' : '2em'
+		fontSize: resolution === 'desktop' ? '2em' : '1em'
 	}),
 	view: resolution => ({
-		fontSize: resolution === 'desktop' ? '4em' : '3em'
+		fontSize: resolution === 'desktop' ? '4em' : '2em'
 	})
 };
 
@@ -38,7 +38,8 @@ export default function Title({children, variant, ...rest}) {
 			css={{
 				color: theme.colors.contrastText,
 				[theme.breakpoints.down('sm')]: {
-					...titleStyles('mobile')
+					...titleStyles('mobile'),
+					textAlign: 'center'
 				},
 				[theme.breakpoints.up('sm')]: {
 					...titleStyles('desktop')
