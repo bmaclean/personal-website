@@ -34,7 +34,6 @@ export default function PaperForm({children, ...rest}) {
 
 	return (
 		<form
-			autoComplete="on"
 			name="contact"
 			method="POST"
 			data-netlify="true"
