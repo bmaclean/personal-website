@@ -36,6 +36,7 @@ export default function PaperForm({children, ...rest}) {
 		<form
 			name="contact"
 			method="POST"
+			onSubmit={handleSubmit}
 			netlify
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"

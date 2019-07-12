@@ -82,7 +82,7 @@ export default function Contact({offset, speed}) {
 						<TextField
 							label="Phone"
 							aria-label="Phone"
-							type="phone"
+							type="tel"
 							name="phone"
 							value={phone}
 							onChange={e => setPhone(e.target.value)}
