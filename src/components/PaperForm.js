@@ -24,8 +24,16 @@ export default function PaperForm({children, ...rest}) {
 				'form-name': form.getAttribute('name')
 			})
 		})
-			.then(() => console.log('Contact info submitted.'))
-			.catch(error => alert(error));
+			.then(response => {
+				console.log('====================================');
+				console.log(`${JSON.stringify(response, null, 2)}`);
+				console.log('====================================');
+			})
+			.catch(error => {
+				console.log('====================================');
+				console.log(`error in submiting the form data:${error}`);
+				console.log('====================================');
+			});
 	};
 
 	const recaptchaSubmit = e => {
