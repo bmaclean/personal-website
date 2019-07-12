@@ -54,7 +54,7 @@ export default function Greeting({offset, speed}) {
 					<Title variant="subtitle">
 						I create <BoldGreetingText>professional</BoldGreetingText>,
 						<BoldGreetingText> high-powered</BoldGreetingText>
-						<br /> web experiences for local businesses.
+						<br /> web experiences for growing businesses.
 					</Title>
 				</span>
 				<ProfileCard />
