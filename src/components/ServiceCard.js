@@ -20,6 +20,7 @@ export default function ServiceCard({
 				borderRadius: '5px',
 				height: '500px',
 				width: '350px',
+				padding: '8px',
 				[theme.breakpoints.down('sm')]: {
 					width: '245px',
 					height: '350px',
@@ -88,7 +89,11 @@ export default function ServiceCard({
 					textAlign: 'center'
 				}}
 			>
-				<p>{description}</p>
+				<p css={{
+					[theme.breakpoints.down('sm')]: {
+						fontSize: 'x-small'
+					}
+				}}>{description}</p>
 			</div>
 		</Card>
 	);

@@ -43,31 +43,35 @@ export default function Contact({offset, speed}) {
 						justifyContent: 'space-evenly',
 						marginTop: '5%',
 						width: '100%',
-						[theme.breakpoints.down('sm')]: {
+						height: '100%',
+						[theme.breakpoints.down('md')]: {
 							alignItems: 'center',
 							flexDirection: 'column',
-							justifyContent: 'space-between'
+							justifyContent: 'space-between',
+							'& > *': {
+								marginBottom: '5%'
+							}
 						}
 					}}
 				>
 					<ServiceCard
 						Icon={Code}
 						title="WEB DESIGN"
-						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+						description="Make a good first impression and own your online presence with a professionally designed, 
+									 responsive, and blazingly fast website."
 					/>{' '}
-					{/* WEB DESIGN */}
 					<ServiceCard
 						Icon={Computer}
 						title="CMS INTEGRATION"
-						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+						description="Combine the ease of use of a CMS with the optimization of a custom-built website. 
+									 You'll have control over your content and leave website performance to the experts."
 					/>{' '}
-					{/* CMS INTEGRATION "I .... to make it easier for you to manage your online business presence." */}
 					<ServiceCard
 						Icon={YoutubeSearchedFor}
 						title="SEARCH ENGINE OPTIMIZATION"
-						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+						description="Get the most out of your website. Drive traffic to your online or retail business with a higher 
+									 organic search ranking, increased page indexing rate, and cutting-edge SEO."
 					/>{' '}
-					{/* SEO */}
 				</div>
 			</ParallaxLayer>
 		</>
