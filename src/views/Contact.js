@@ -70,7 +70,7 @@ export default function Contact({offset, speed}) {
 						<TextField
 							label="Email"
 							aria-label="Email"
-							name="_replyTo"
+							name="email"
 							type="email"
 							value={email}
 							onChange={e => setEmail(e.target.value)}
