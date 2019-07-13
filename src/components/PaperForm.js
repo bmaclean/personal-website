@@ -21,7 +21,8 @@ export default function PaperForm({children, ...rest}) {
 			method: 'POST',
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			body: encode({
-				'form-name': form.getAttribute('name')
+				'form-name': form.getAttribute('name'),
+				'test-field': 'foo-bar'
 			})
 		})
 			.then(response => {

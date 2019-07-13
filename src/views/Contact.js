@@ -83,7 +83,7 @@ export default function Contact({offset, speed}) {
 							label="Phone"
 							aria-label="Phone"
 							type="tel"
-							name="phone"
+							name="tel"
 							value={phone}
 							onChange={e => setPhone(e.target.value)}
 							margin="normal"
