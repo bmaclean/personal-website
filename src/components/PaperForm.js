@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {navigate} from 'gatsby';
 import {Button} from '@material-ui/core';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -32,6 +33,7 @@ export default function PaperForm({children, ...rest}) {
 				console.log('====================================');
 				console.log(`${JSON.stringify(response, null, 2)}`);
 				console.log('====================================');
+		        navigate(form.getAttribute("action"))
 			})
 			.catch(error => {
 				console.log('====================================');
@@ -48,6 +50,7 @@ export default function PaperForm({children, ...rest}) {
 		<form
 			name="contact"
 			method="POST"
+			action='/thanks'
 			onSubmit={handleSubmit}
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
