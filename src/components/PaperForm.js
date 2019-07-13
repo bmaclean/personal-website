@@ -22,7 +22,10 @@ export default function PaperForm({children, ...rest}) {
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			body: encode({
 				'form-name': form.getAttribute('name'),
-				'test-field': 'foo-bar'
+				'name': 'Brendan',
+				'email': 'brendan.maclean94@gmail.com',
+				'tel': '403.393.0000',
+				'description': 'Lorem ipsum sit amet'
 			})
 		})
 			.then(response => {
@@ -46,7 +49,6 @@ export default function PaperForm({children, ...rest}) {
 			name="contact"
 			method="POST"
 			onSubmit={handleSubmit}
-			netlify
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 			action="/"
