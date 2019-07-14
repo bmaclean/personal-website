@@ -52,6 +52,7 @@ export default function PaperForm({children, ...rest}) {
 			method="POST"
 			action='/thanks'
 			onSubmit={handleSubmit}
+			netlify
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 			css={{
