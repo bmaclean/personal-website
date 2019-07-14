@@ -52,7 +52,6 @@ export default function PaperForm({children, ...rest}) {
 			method="POST"
 			action='/thanks'
 			onSubmit={handleSubmit}
-			netlify
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
 			css={{
@@ -90,9 +89,9 @@ export default function PaperForm({children, ...rest}) {
 			}}
 			{...rest}
 		>
+			<input type="hidden" name="form-name" value="contact" />
 			{/* Used to detect spam bots */}
 			<input type="hidden" name="bot-field" />
-			<input type="hidden" name="form-name" value="contact" />
 			{children}
 			<div
 				css={{
