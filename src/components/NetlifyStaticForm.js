@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Static form to help Netlify bots find and create Contact form.
+ */
 export default function NetlifyStaticForm() {
 	return (
 		<form method="post" data-netlify="true" name="contact" css={{display: 'none'}}>

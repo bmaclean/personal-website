@@ -11,7 +11,7 @@ function encode(data) {
 		.join('&');
 }
 
-export default function PaperForm({children, ...rest}) {
+export default function PaperForm({children, fields, ...rest}) {
 	const [verified, setVerified] = useState(false);
 	const theme = useTheme();
 
@@ -23,10 +23,7 @@ export default function PaperForm({children, ...rest}) {
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			body: encode({
 				'form-name': form.getAttribute('name'),
-				name: 'Brendan',
-				email: 'brendan.maclean94@gmail.com',
-				tel: '403.393.0000',
-				description: 'Lorem ipsum sit amet'
+				...fields
 			})
 		})
 			.then(response => {
