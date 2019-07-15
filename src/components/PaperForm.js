@@ -23,17 +23,17 @@ export default function PaperForm({children, ...rest}) {
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			body: encode({
 				'form-name': form.getAttribute('name'),
-				'name': 'Brendan',
-				'email': 'brendan.maclean94@gmail.com',
-				'tel': '403.393.0000',
-				'description': 'Lorem ipsum sit amet'
+				name: 'Brendan',
+				email: 'brendan.maclean94@gmail.com',
+				tel: '403.393.0000',
+				description: 'Lorem ipsum sit amet'
 			})
 		})
 			.then(response => {
 				console.log('====================================');
 				console.log(`${JSON.stringify(response, null, 2)}`);
 				console.log('====================================');
-		        navigate(form.getAttribute("action"))
+				navigate(form.getAttribute('action'));
 			})
 			.catch(error => {
 				console.log('====================================');
@@ -50,7 +50,7 @@ export default function PaperForm({children, ...rest}) {
 		<form
 			name="contact"
 			method="POST"
-			action='/thanks'
+			action="/thanks"
 			onSubmit={handleSubmit}
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"
