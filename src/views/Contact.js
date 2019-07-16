@@ -6,13 +6,21 @@ import {ParallaxLayer} from 'react-spring/renderprops-addons';
 import {useTheme} from '../hooks';
 import {PaperForm, Title, ViewLayer} from '../components';
 
-export default function Contact({offset, speed}) {
+export default function Contact({offset, speed, onSubmit}) {
 	const theme = useTheme();
 	const [name, setName] = useState('');
 	const [company, setCompany] = useState('');
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
 	const [description, setDescription] = useState('');
+
+	const resetForm = () => {
+		setName('');
+		setCompany('');
+		setEmail('');
+		setPhone('');
+		setDescription('');
+	}
 
 	return (
 		<>
@@ -45,6 +53,7 @@ export default function Contact({offset, speed}) {
 				<PaperForm
 					css={{marginTop: '2rem'}}
 					fields={{name, company, email, phone, description}}
+					onSubmit={() => {onSubmit(); resetForm();}}
 				>
 					<div>
 						<TextField
