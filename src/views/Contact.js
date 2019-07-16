@@ -70,6 +70,7 @@ export default function Contact({offset, speed, onSubmit}) {
 						<TextField
 							label="Company"
 							aria-label="Company"
+							type="text"
 							name="company"
 							value={company}
 							onChange={e => setCompany(e.target.value)}
@@ -82,8 +83,9 @@ export default function Contact({offset, speed, onSubmit}) {
 						<TextField
 							label="Email"
 							aria-label="Email"
-							name="email"
 							type="email"
+							name="email"
+							placeholder="name@example.com"
 							value={email}
 							onChange={e => setEmail(e.target.value)}
 							margin="normal"
@@ -96,6 +98,7 @@ export default function Contact({offset, speed, onSubmit}) {
 							aria-label="Phone"
 							type="tel"
 							name="tel"
+							placeholder="(XXX) XXX-XXXX"
 							value={phone}
 							onChange={e => setPhone(e.target.value)}
 							margin="normal"
@@ -105,9 +108,11 @@ export default function Contact({offset, speed, onSubmit}) {
 					</div>
 					<div>
 						<TextField
-							label="Please describe your web project and online business needs."
-							aria-label="Please describe your web project and online business needs."
+							label="Message"
+							aria-label="Message"
+							type="text"
 							name="description"
+							placeholder="Please describe your web project and online business needs."
 							value={description}
 							onChange={e => setDescription(e.target.value)}
 							multiline
