@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 // import {Link} from 'gatsby';
-
 import {Parallax} from 'react-spring/renderprops-addons';
 
 import {BMWSToast, Layout, NetlifyStaticForm, SEO} from '../components';
