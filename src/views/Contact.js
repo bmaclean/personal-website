@@ -44,7 +44,7 @@ export default function Contact({offset, speed}) {
 				</Title>
 				<PaperForm
 					css={{marginTop: '2rem'}}
-					fields={(name, company, email, phone, description)}
+					fields={{name, company, email, phone, description}}
 				>
 					<div>
 						<TextField

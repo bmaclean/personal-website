@@ -18,6 +18,7 @@ export default function PaperForm({children, fields, ...rest}) {
 	const handleSubmit = e => {
 		e.preventDefault();
 		const form = e.target;
+		console.log(fields)
 		fetch('/', {
 			method: 'POST',
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
