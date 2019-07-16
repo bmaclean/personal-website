@@ -50,7 +50,8 @@ export default function Contact({offset, speed}) {
 							justifyContent: 'space-between',
 							'& > *': {
 								marginBottom: '5%'
-							}
+							},
+							marginBottom: '100%'
 						}
 					}}
 				>

@@ -28,7 +28,8 @@ export default function Greeting({offset, speed}) {
 				offset={offset}
 				speed={speed}
 				css={{
-					background: theme.colors.background
+					background: theme.colors.background,
+					zIndex: -1
 				}}
 			></ParallaxLayer>
 
