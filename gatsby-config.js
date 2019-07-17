@@ -3,7 +3,9 @@ module.exports = {
 		title: 'Brendan Maclean Web Services',
 		description:
 			'Creating professional, high-powered web experiences for local businesses.',
-		author: '@bmaclean'
+		keywords: ['web design'],
+		siteUrl: 'https://www.brendanmaclean.co/',
+		author: '@bmaclean05'
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

@@ -4,13 +4,14 @@ import {Parallax} from 'react-spring/renderprops-addons';
 
 import {BMWSToast, Layout, NetlifyStaticForm, SEO} from '../components';
 import {Contact, Greeting, Services} from '../views';
+import Logo from '../images/temp-logo.png';
 
 const IndexPage = () => {
 	const [alertOpen, setAlertOpen] = useState(false);
 
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SEO image={Logo} title="Home" />
 			<NetlifyStaticForm />
 			<Parallax pages={3.2}>
 				<Greeting offset={0} speed={0.5} />
