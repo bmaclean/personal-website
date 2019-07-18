@@ -1,5 +1,5 @@
 export {default as Card} from './Card';
-export {default as BMWSToast} from './BMWSToast';
+export {default as Toast} from './Toast';
 export {default as Layout} from './Layout';
 export {default as NetlifyStaticForm} from './NetlifyStaticForm';
 export {default as PaperForm} from './PaperForm';

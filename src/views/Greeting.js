@@ -24,7 +24,7 @@ export default function Greeting({offset, speed}) {
 	return (
 		<div>
 			<ParallaxLayer
-				factor={1.8}
+				factor={1.3}
 				offset={offset}
 				speed={speed}
 				css={{

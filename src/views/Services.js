@@ -21,7 +21,7 @@ export default function Contact({offset, speed}) {
 				speed={1.5}
 				offset={offset}
 				css={{
-					marginTop: '15%',
+					marginTop: '50%',
 					display: 'flex',
 					justifyContent: 'center',
 					flexDirection: 'column',
@@ -51,7 +51,7 @@ export default function Contact({offset, speed}) {
 							'& > *': {
 								marginBottom: '5%'
 							},
-							marginBottom: '100%'
+							// marginBottom: ''
 						}
 					}}
 				>

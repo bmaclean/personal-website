@@ -34,7 +34,7 @@ export default function Contact({offset, speed, onSubmit}) {
 				speed={1.5}
 				offset={offset}
 				css={{
-					marginTop: '18%',
+					marginTop: '35%',
 					display: 'flex',
 					justifyContent: 'center',
 					flexDirection: 'column',
