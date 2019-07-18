@@ -58,6 +58,7 @@ export default function Contact({offset, speed, onSubmit}) {
 					<div>
 						<TextField
 							label="Name"
+							id="Name"
 							aria-label="Name"
 							name="name"
 							value={name}
@@ -69,6 +70,7 @@ export default function Contact({offset, speed, onSubmit}) {
 						/>
 						<TextField
 							label="Company"
+							id="Company"
 							aria-label="Company"
 							type="text"
 							name="company"
@@ -82,6 +84,7 @@ export default function Contact({offset, speed, onSubmit}) {
 					<div>
 						<TextField
 							label="Email"
+							id="Email"
 							aria-label="Email"
 							type="email"
 							name="email"
@@ -95,6 +98,7 @@ export default function Contact({offset, speed, onSubmit}) {
 						/>
 						<TextField
 							label="Phone"
+							id="Phone"
 							aria-label="Phone"
 							type="tel"
 							name="tel"
@@ -109,6 +113,7 @@ export default function Contact({offset, speed, onSubmit}) {
 					<div>
 						<TextField
 							label="Message"
+							id="Message"
 							aria-label="Message"
 							type="text"
 							name="description"
