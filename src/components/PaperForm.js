@@ -11,7 +11,7 @@ function encode(data) {
 		.join('&');
 }
 
-export default function PaperForm({children, fields, ...rest}) {
+export default function PaperForm({children, onSubmit, fields, ...rest}) {
 	const [verified, setVerified] = useState(false);
 	const theme = useTheme();
 
@@ -26,16 +26,11 @@ export default function PaperForm({children, fields, ...rest}) {
 				...fields
 			})
 		})
-			.then(response => {
-				console.log('====================================');
-				console.log(`${JSON.stringify(response, null, 2)}`);
-				console.log('====================================');
-				navigate(form.getAttribute('action'));
+			.then(() => {
+				onSubmit();
 			})
 			.catch(error => {
-				console.log('====================================');
-				console.log(`error in submiting the form data:${error}`);
-				console.log('====================================');
+				console.warn(error);
 			});
 	};
 
@@ -47,7 +42,6 @@ export default function PaperForm({children, fields, ...rest}) {
 		<form
 			name="contact"
 			method="POST"
-			action="/thanks"
 			onSubmit={handleSubmit}
 			data-netlify="true"
 			data-netlify-honeypot="bot-field"

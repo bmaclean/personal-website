@@ -3,7 +3,9 @@ module.exports = {
 		title: 'Brendan Maclean Web Services',
 		description:
 			'Creating professional, high-powered web experiences for local businesses.',
-		author: '@bmaclean'
+		keywords: ['web design', 'website design', 'website', 'web development', 'website', 'lethbridge', 'alberta'],
+		siteUrl: 'https://www.brendanmaclean.co/',
+		author: '@bmaclean05'
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
@@ -25,7 +27,7 @@ module.exports = {
 				background_color: '#0B1722',
 				theme_color: '#3D52D5',
 				display: 'minimal-ui',
-				icon: 'src/images/curly_brackets.png'
+				icon: 'src/images/temp-icon.png'
 			}
 		}
 	]
