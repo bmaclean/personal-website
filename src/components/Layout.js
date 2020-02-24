@@ -11,7 +11,6 @@ import {StaticQuery, graphql} from 'gatsby';
 
 import './layout.css';
 
-// TODO: investigate and update Layout
 const Layout = ({children}) => (
 	<StaticQuery
 		query={graphql`

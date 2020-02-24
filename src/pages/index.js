@@ -13,16 +13,6 @@ const IndexPage = () => {
 		<Layout>
 			<SEO image={Logo} title="Home" />
 			<NetlifyStaticForm />
-			<Parallax pages={2.6}>
-				<Greeting offset={0} speed={0.5} />
-				<Services offset={0.9} speed={0.5} />
-				<Contact offset={1.8} speed={0.5} onSubmit={() => setAlertOpen(true)} />
-			</Parallax>
-			<Toast 
-				open={alertOpen}
-	          	onClose={() => setAlertOpen(false)} 
-	          	message="Submitted!"
-	        />
 		</Layout>
 	);
 };
