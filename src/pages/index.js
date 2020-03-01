@@ -4,7 +4,7 @@ import {Parallax} from 'react-spring/renderprops-addons';
 
 import {Toast, Layout, NetlifyStaticForm, SEO} from '../components';
 import {Contact, Greeting, Services} from '../views';
-import Logo from '../images/temp-logo.png';
+import Logo from '../images/curly-brackets.png';
 
 const IndexPage = () => {
 	const [alertOpen, setAlertOpen] = useState(false);

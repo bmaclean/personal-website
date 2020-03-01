@@ -27,7 +27,7 @@ module.exports = {
 				background_color: '#0B1722',
 				theme_color: '#3D52D5',
 				display: 'minimal-ui',
-				icon: 'src/images/temp-icon.png'
+				icon: 'src/images/curly-brackets.png'
 			}
 		}
 	]
