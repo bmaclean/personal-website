@@ -1,4 +1,4 @@
-![A preview of the website Greeting page.](./src/images/website_preview.png)
+![A preview of the website Greeting page.](./src/images/website-preview.png)
 
 # Brendan Maclean Web Services Website
 
