@@ -20,7 +20,7 @@ function SEO({description, lang, meta, image: metaImage, title}) {
 						description
 						keywords
 						title
-			            siteUrl
+						siteUrl
 					}
 				}
 			}
@@ -29,9 +29,9 @@ function SEO({description, lang, meta, image: metaImage, title}) {
 
 	const metaDescription = description || site.siteMetadata.description;
 	const image =
-          metaImage && metaImage.src
-            ? `${data.site.siteMetadata.siteUrl}${metaImage.src}`
-            : null;
+		metaImage && metaImage.src
+			? `${data.site.siteMetadata.siteUrl}${metaImage.src}`
+			: null;
 
 	return (
 		<Helmet
@@ -45,10 +45,10 @@ function SEO({description, lang, meta, image: metaImage, title}) {
 					name: 'description',
 					content: metaDescription
 				},
-                {
-                  	name: 'keywords',
-                  	content: site.siteMetadata.keywords.join(",")
-                },
+				{
+					name: 'keywords',
+					content: site.siteMetadata.keywords.join(',')
+				},
 				{
 					property: 'og:title',
 					content: title
@@ -73,35 +73,35 @@ function SEO({description, lang, meta, image: metaImage, title}) {
 					name: 'twitter:description',
 					content: metaDescription
 				}
-			].concat(
-                  metaImage
-                    ? [
-                        {
-                          property: "og:image",
-                          content: image
-                        },
-                        {
-                          property: "og:image:width",
-                          content: metaImage.width
-                        },
-                        {
-                          property: "og:image:height",
-                          content: metaImage.height
-                        },
-                        {
-                          name: "twitter:card",
-                          content: "summary_large_image"
-                        }
-                      ]
-                    : [
-                        {
-                          name: "twitter:card",
-                          content: "summary"
-                        }
-                      ]
-                )
-                .concat(meta)
-            }
+			]
+				.concat(
+					metaImage
+						? [
+								{
+									property: 'og:image',
+									content: image
+								},
+								{
+									property: 'og:image:width',
+									content: metaImage.width
+								},
+								{
+									property: 'og:image:height',
+									content: metaImage.height
+								},
+								{
+									name: 'twitter:card',
+									content: 'summary_large_image'
+								}
+						  ]
+						: [
+								{
+									name: 'twitter:card',
+									content: 'summary'
+								}
+						  ]
+				)
+				.concat(meta)}
 		/>
 	);
 }
@@ -115,11 +115,11 @@ SEO.defaultProps = {
 SEO.propTypes = {
 	description: PropTypes.string,
 	keywords: PropTypes.arrayOf(PropTypes.string),
-  	image: PropTypes.shape({
-    	src: PropTypes.string,
-    	height: PropTypes.string,
-    	width: PropTypes.string
-  	}),
+	image: PropTypes.shape({
+		src: PropTypes.string,
+		height: PropTypes.string,
+		width: PropTypes.string
+	}),
 	lang: PropTypes.string,
 	meta: PropTypes.arrayOf(PropTypes.object),
 	title: PropTypes.string.isRequired

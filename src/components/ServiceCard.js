@@ -89,11 +89,15 @@ export default function ServiceCard({
 					textAlign: 'center'
 				}}
 			>
-				<p css={{
-					[theme.breakpoints.down('sm')]: {
-						fontSize: 'x-small'
-					}
-				}}>{description}</p>
+				<p
+					css={{
+						[theme.breakpoints.down('sm')]: {
+							fontSize: 'x-small'
+						}
+					}}
+				>
+					{description}
+				</p>
 			</div>
 		</Card>
 	);

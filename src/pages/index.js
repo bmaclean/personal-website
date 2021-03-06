@@ -18,11 +18,11 @@ const IndexPage = () => {
 				<Services offset={0.9} speed={0.5} />
 				<Contact offset={1.8} speed={0.5} onSubmit={() => setAlertOpen(true)} />
 			</Parallax>
-			<Toast 
+			<Toast
 				open={alertOpen}
-	          	onClose={() => setAlertOpen(false)} 
-	          	message="Submitted!"
-	        />
+				onClose={() => setAlertOpen(false)}
+				message="Submitted!"
+			/>
 		</Layout>
 	);
 };

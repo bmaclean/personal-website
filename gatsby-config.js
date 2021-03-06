@@ -3,7 +3,15 @@ module.exports = {
 		title: 'Brendan Maclean Web Services',
 		description:
 			'Creating professional, high-powered web experiences for local businesses.',
-		keywords: ['web design', 'website design', 'website', 'web development', 'website', 'lethbridge', 'alberta'],
+		keywords: [
+			'web design',
+			'website design',
+			'website',
+			'web development',
+			'website',
+			'lethbridge',
+			'alberta'
+		],
 		siteUrl: 'https://www.brendanmaclean.co/',
 		author: '@bmaclean05'
 	},

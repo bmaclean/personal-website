@@ -20,7 +20,7 @@ export default function Contact({offset, speed, onSubmit}) {
 		setEmail('');
 		setPhone('');
 		setDescription('');
-	}
+	};
 
 	return (
 		<>
@@ -53,7 +53,10 @@ export default function Contact({offset, speed, onSubmit}) {
 				<PaperForm
 					css={{marginTop: '2rem'}}
 					fields={{name, company, email, phone, description}}
-					onSubmit={() => {onSubmit(); resetForm();}}
+					onSubmit={() => {
+						onSubmit();
+						resetForm();
+					}}
 				>
 					<div>
 						<TextField
