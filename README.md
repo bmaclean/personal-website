@@ -1,6 +1,6 @@
 ![A preview of the website Greeting page.](./src/images/website-preview.png)
 
-# Brendan Maclean Web Services Website
+# Brendan Maclean Personal Website
 
 This freelance website project was made to promote myself as a freelance web developer, with the added benefit of learning Gatsby.
 
